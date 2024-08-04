@@ -1,0 +1,62 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "Rails Conference 2024",
+      "date": "2024-05-20",
+      "description": "Join us for a day of insightful talks and networking with industry leaders in technology.",
+      "location": "Convention Center, Downtown"
+    },
+    {
+      "id": "2",
+      "title": "Vue Conference 2023",
+      "date": "2024-05-20",
+      "description": "Join us for a day of insightful talks and networking with industry leaders in technology.",
+      "location": "Convention Center, Downtown"
+    },
+    {
+      "id": "3",
+      "title": "PHP Conference 2022",
+      "date": "2024-05-20",
+      "description": "Join us for a day of insightful talks and networking with industry leaders in technology.",
+      "location": "Convention Center, Downtown"
+    },
+    {
+      "id": "4",
+      "title": "Rust Conference 2021",
+      "date": "2024-05-20",
+      "description": "Join us for a day of insightful talks and networking with industry leaders in technology.",
+      "location": "Convention Center, Downtown"
+    },
+    {
+      "id": "5",
+      "title": "Gamescom 2024",
+      "date": "2024-08-22",
+      "description": "Lets have fun in germany at a game conference, yay.",
+      "location": "Convention Center, Cologne"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "1722780106769",
+      "userId": 1,
+      "eventId": "5",
+      "eventTitle": "Gamescom 2024",
+      "status": "confirmed"
+    },
+    {
+      "id": "1722780222168",
+      "userId": 1,
+      "eventId": "4",
+      "eventTitle": "Rust Conference 2021",
+      "status": "confirmed"
+    },
+    {
+      "id": "1722780374220",
+      "userId": 1,
+      "eventId": "2",
+      "eventTitle": "Vue Conference 2023",
+      "status": "confirmed"
+    }
+  ]
+}
