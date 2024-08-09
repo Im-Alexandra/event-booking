@@ -1,11 +1,8 @@
 <template>
   <template v-if="error">
-    <SectionCard>
-      <div class="flex flex-col items-center space-y-2 p-2">
-        <span class="text-red-500">Could not load events at the moment. Please try again.</span>
-        <CustomButton @click="fetchEvents">Retry now</CustomButton>
-      </div>
-    </SectionCard>
+    <ErrorCard :retry="fetchEvents"
+      >Could not load events at the moment. Please try again.</ErrorCard
+    >
   </template>
   <template v-else>
     <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -17,7 +14,7 @@
             :title="e.title"
             :date="e.date"
             :description="e.description"
-            @register="$emit('register', e)"
+            @register="handleRegistration(e)"
           />
         </template>
         <template v-else>
@@ -34,10 +31,10 @@
 import { ref, onMounted } from 'vue';
 import EventCard from '@/components/EventCard.vue';
 import LoadingEventCard from '@/components/LoadingEventCard.vue';
-import SectionCard from '@/components/SectionCard.vue';
-import CustomButton from '@/components/CustomButton.vue';
+import ErrorCard from '@/components/ErrorCard.vue';
+import useBookings from '@/composables/useBookings';
 
-defineEmits(['register']);
+const { handleRegistration } = useBookings();
 
 const events = ref([]);
 const loading = ref(false);
